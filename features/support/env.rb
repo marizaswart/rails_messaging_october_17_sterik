@@ -2,6 +2,7 @@ require 'coveralls'
 Coveralls.wear!('rails')
 
 require 'cucumber/rails'
+require 'capybara/poltergeist'
 
 ActionController::Base.allow_rescue = false
 
@@ -12,3 +13,4 @@ rescue NameError
 end
 
 Cucumber::Rails::Database.javascript_strategy = :truncation
+Capybara.javascript_driver = :poltergeist
